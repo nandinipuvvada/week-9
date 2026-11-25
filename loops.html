@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Loops</title>
+</head>
+<body>
+    <h2>Multiplication Table of 7 (for loop)</h2>
+    <div id="table1"></div>
+    <h2>Numbers 1 to 10 (while loop)</h2>
+    <div id="table2"></div>
+    <h2>Countdown 10 to 1 (do-while loop)</h2>
+    <div id="table3"></div>
+    <script>
+        let result1 = "";
+        for (let i = 1; i <= 10; i++) {
+            result1 += "7 x " + i + " = " + (7 * i) + "<br>";
+        }
+        document.getElementById("table1").innerHTML = result1;
+        let result2 = "";
+        let j = 1;
+        while (j <= 10) {
+            result2 += j + " ";
+            j++;
+        }
+        document.getElementById("table2").innerHTML = result2;
+        let result3 = "";
+        let k = 10;
+        do {
+            result3 += k + " ";
+            k--;
+        } while (k >= 1);
+        document.getElementById("table3").innerHTML = result3;
+    </script>
+</body>
+</html>

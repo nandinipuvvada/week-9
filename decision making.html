@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Decision Making</title>
+</head>
+<body>
+    <h2>Student Grade Calculator</h2>
+    <div id="output"></div>
+    <script>
+        let score = 95;
+        let grade;
+        if (score >= 90)
+            grade = "A+";
+        else if (score >= 80)
+            grade = "A";
+        else if (score >= 70)
+            grade = "B";
+        else if (score >= 50)
+            grade = "C";
+        else
+            grade = "Fail";
+        let remark;
+        switch (grade) {
+            case "A+":
+            case "A":
+                remark = "Outstanding";
+                break;
+            case "B":
+                remark = "Very Good";
+                break;
+            case "C":
+                remark = "Needs Practice";
+                break;
+            default:
+                remark = "Repeat Again";
+        }
+        document.getElementById("output").innerHTML =
+            "Student Score: " + score +
+            "<br>Grade: " + grade +
+            "<br>Remark: " + remark;
+    </script>
+</body>
+</html>

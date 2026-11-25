@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Arrays</title>
+</head>
+<body>
+    <h2>Working with JavaScript Arrays</h2>
+    <div id="output"></div>
+    <script>
+        let vegetables = ["Carrot", "Potato", "Tomato"];
+        vegetables.push("Onion");  
+        let result = "Array: " + vegetables.join(", ") + "<br>";
+        result += "Length: " + vegetables.length + "<br>";
+        result += "First Element: " + vegetables[0] + "<br><br>";
+        let values = [12, 30, 8, 45, 20];
+        let total = 0;
+        let maximum = values[0];
+        for (let num of values) {
+            total += num;
+            if (num > maximum) {
+                maximum = num;
+            }
+        }
+        result += "Numbers: " + values.join(", ") + "<br>";
+        result += "Sum = " + total + "<br>";
+        result += "Maximum = " + maximum;
+        document.getElementById("output").innerHTML = result;
+    </script>
+</body>
+</html>
